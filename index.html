@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cayenne Black Edition | Porsche</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Preload critical images for instant display -->
+    <link rel="preload" as="image" href="images/hero.png">
+    <link rel="preload" as="image" href="images/porsche-cayenne.png">
+    <link rel="preload" as="image" href="images/engine.png">
+    
+    <!-- GSAP for High-End Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Smooth Scroll Wrapper -->
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <!-- Navigation -->
+            <nav class="navbar">
+                <div class="logo-container">
+                    <div class="logo">PORSCHE</div>
+                    <div class="logo-subtitle">[BY BHARAT]</div>
+                </div>
+                <div class="menu">
+                    <span class="nav-link">Models</span>
+                    <span class="nav-link">Black Edition</span>
+                    <span class="nav-link">Configurator</span>
+                    <span class="nav-link highlight">Test Drive</span>
+                </div>
+                <!-- Menu Toggle / Hamburger -->
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </nav>
+
+            <!-- Hero Section -->
+            <header class="hero">
+                <div class="hero-bg">
+                    <!-- Porsche Logo Background -->
+                    <div class="porsche-logo-bg">PORSCHE</div>
+                    <!-- Ultra Realistic Busy Background Animation -->
+                    <div class="busy-background-container">
+                        <img src="images/busy-background.svg" alt="Busy Street Background" class="busy-background">
+                    </div>
+                    <!-- Main Hero Image with Jump Animation -->
+                    <div class="hero-car-container">
+                        <img src="images/hero.png" alt="Porsche Cayenne Black Edition Hero" class="hero-car">
+                        <!-- Wheel Damage Effect on Landing -->
+                        <img src="images/wheel-damage.svg" alt="Wheel Damage" class="wheel-damage-effect">
+                    </div>
+                    <!-- Ultra Realistic Smoke Effect -->
+                    <div class="smoke-container">
+                        <svg class="smoke-effect" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <filter id="smokeBlur">
+                                    <feGaussianBlur in="SourceGraphic" stdDeviation="8" />
+                                </filter>
+                                <filter id="realisticSmoke">
+                                    <feGaussianBlur in="SourceGraphic" stdDeviation="12" />
+                                    <feComponentTransfer>
+                                        <feFuncA type="linear" slope="0.6"/>
+                                    </feComponentTransfer>
+                                </filter>
+                                <radialGradient id="smokeGrad1">
+                                    <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8" />
+                                    <stop offset="70%" style="stop-color:#d0d0d0;stop-opacity:0.4" />
+                                    <stop offset="100%" style="stop-color:#808080;stop-opacity:0" />
+                                </radialGradient>
+                                <radialGradient id="smokeGrad2">
+                                    <stop offset="0%" style="stop-color:#f5f5f5;stop-opacity:0.7" />
+                                    <stop offset="70%" style="stop-color:#a8a8a8;stop-opacity:0.3" />
+                                    <stop offset="100%" style="stop-color:#505050;stop-opacity:0" />
+                                </radialGradient>
+                                <radialGradient id="smokeGrad3">
+                                    <stop offset="0%" style="stop-color:#e8e8e8;stop-opacity:0.6" />
+                                    <stop offset="70%" style="stop-color:#888888;stop-opacity:0.2" />
+                                    <stop offset="100%" style="stop-color:#303030;stop-opacity:0" />
+                                </radialGradient>
+                            </defs>
+                            <!-- Left Smoke Clouds -->
+                            <g class="smoke-left" filter="url(#realisticSmoke)">
+                                <circle cx="350" cy="450" r="65" fill="url(#smokeGrad1)" />
+                                <ellipse cx="320" cy="420" rx="55" ry="75" fill="url(#smokeGrad2)" opacity="0.7" />
+                                <circle cx="380" cy="440" r="70" fill="url(#smokeGrad3)" opacity="0.65" />
+                            </g>
+                            <!-- Center Smoke Clouds -->
+                            <g class="smoke-center" filter="url(#realisticSmoke)">
+                                <circle cx="500" cy="460" r="75" fill="url(#smokeGrad1)" opacity="0.8" />
+                                <ellipse cx="470" cy="430" rx="65" ry="85" fill="url(#smokeGrad2)" opacity="0.65" />
+                                <circle cx="530" cy="450" r="75" fill="url(#smokeGrad3)" opacity="0.6" />
+                            </g>
+                            <!-- Right Smoke Clouds -->
+                            <g class="smoke-right" filter="url(#realisticSmoke)">
+                                <circle cx="650" cy="450" r="65" fill="url(#smokeGrad1)" />
+                                <ellipse cx="680" cy="420" rx="55" ry="75" fill="url(#smokeGrad2)" opacity="0.7" />
+                                <circle cx="620" cy="440" r="70" fill="url(#smokeGrad3)" opacity="0.65" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hero-content">
+                    <h1 class="hero-title">CAYENNE</h1>
+                    <h2 class="hero-subtitle">BLACK EDITION</h2>
+                    <p class="hero-desc">Driven by dreams. Define by darkness.</p>
+                </div>
+            </header>
+
+            <!-- Narrative Text -->
+            <section class="narrative" data-bgcolor="#000">
+                <div class="container text-reveal">
+                    <p class="big-text">
+                        The essence of <span class="highlight">sportiness</span> tailored in
+                        absolute elegance. The Cayenne Black Edition
+                        merges high-gloss black accents with
+                        uncompromising performance.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Showcase / Side Profile -->
+            <section class="showcase">
+                <div class="showcase-img-wrapper">
+                    <!-- Using Generated Side Profile -->
+                    <img class="parallax-img" src="images/side.png" alt="Side Profile">
+                </div>
+                <div class="showcase-specs">
+                    <div class="spec-item">
+                        <span class="label">Power (PS)</span>
+                        <span class="value">640</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="label">0-100 km/h</span>
+                        <span class="value">3.3 s</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="label">Top Speed</span>
+                        <span class="value">300 km/h</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interior Section -->
+            <section class="interior-section">
+                <div class="interior-text">
+                    <h2>Immersive Interior</h2>
+                    <p>Darkened leather, ambient lighting, and digital precision.</p>
+                    <div class="interior-features">
+                        <div class="interior-feature">
+                            <h4>Premium Materials</h4>
+                            <span>Hand-stitched leather, alcantara trim</span>
+                        </div>
+                        <div class="interior-feature">
+                            <h4>Ambient Lighting</h4>
+                            <span>64-color customizable LED system</span>
+                        </div>
+                        <div class="interior-feature">
+                            <h4>Digital Cockpit</h4>
+                            <span>12.3" curved instrument display</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="interior-img">
+                    <img src="images/interior.png" alt="Interior">
+                </div>
+            </section>
+
+            <!-- Detail Grid -->
+            <section class="features">
+                <h2 class="section-title">Black Edition Essentials</h2>
+                <div class="cayenne-showcase">
+                    <img src="images/porsche-cayenne.png" alt="Porsche Cayenne Black Edition" class="cayenne-main">
+                </div>
+                <div class="features-grid">
+                <div class="feature-card">
+                    <div class="card-img">
+                        <img src="images/wheel.png" alt="Wheel Detail">
+                    </div>
+                    <div class="card-txt">
+                        <h3>21-inch RS Spyder</h3>
+                        <p>Satin Black finish exclusively designed for the Black Edition.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="card-img">
+                        <img src="images/headlight.png" alt="HD-Matrix LED Headlights">
+                    </div>
+                    <div class="card-txt">
+                        <h3>HD-Matrix LED</h3>
+                        <p>Darkened headlights that pierce through the night with pinpoint precision.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="card-img">
+                        <img src="images/sound.png" alt="Bose Surround Sound System">
+                    </div>
+                    <div class="card-txt">
+                        <h3>Bose® Surround</h3>
+                        <p>Immersive audio experience tailored for the cabin acoustics.</p>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <!-- Performance Section -->
+            <section class="performance">
+                <h2>Performance Specifications</h2>
+                <div class="perf-showcase">
+                    <img src="images/engine.png" alt="Engine" class="perf-image">
+                </div>
+                <div class="performance-grid">
+                    <div class="perf-item">
+                        <h3>Engine</h3>
+                        <p>4.0L Twin-Turbo V8</p>
+                        <span class="detail">Twin turbochargers with adaptive systems</span>
+                    </div>
+                    <div class="perf-item">
+                        <h3>Acceleration</h3>
+                        <p>0-100 km/h in 3.3s</p>
+                        <span class="detail">With Sport Response engaged</span>
+                    </div>
+                    <div class="perf-item">
+                        <h3>Power Output</h3>
+                        <p>640 PS @ 5,750 RPM</p>
+                        <span class="detail">Peak performance at high RPM</span>
+                    </div>
+                    <div class="perf-item">
+                        <h3>Torque</h3>
+                        <p>850 Nm @ 2,250-4,500 RPM</p>
+                        <span class="detail">Broad torque band for responsive driving</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <section class="testimonials">
+                <h2 class="testimonials-title">Owner Stories</h2>
+                <div class="testimonial-container">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"The Black Edition redefined my expectations. Every drive feels like a precision instrument."</p>
+                        <p class="testimonial-author">— Marcus L., Collector</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"The blend of power and elegance is unmatched. This is a statement."</p>
+                        <p class="testimonial-author">— Sarah Chen, Entrepreneur</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Pure driving pleasure with the prestige of Porsche heritage."</p>
+                        <p class="testimonial-author">— James K., Enthusiast</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Customization Options -->
+            <section class="customization">
+                <h2>Customize Your Black Edition</h2>
+                <div class="color-showcase">
+                    <img src="images/colors.png" alt="Color Options" class="color-image">
+                </div>
+                <div class="customization-grid">
+                    <div class="custom-option">
+                        <h3>Exterior Colors</h3>
+                        <ul>
+                            <li>Jet Black Metallic</li>
+                            <li>Obsidian Black Pearl</li>
+                            <li>Deep Black Metallic</li>
+                            <li>Carbon Black</li>
+                        </ul>
+                    </div>
+                    <div class="custom-option">
+                        <h3>Interior Finishes</h3>
+                        <ul>
+                            <li>Alcantara Sport Steering Wheel</li>
+                            <li>Darkened Leather Seats</li>
+                            <li>Carbon Fiber Accents</li>
+                            <li>Customizable Ambient Lighting</li>
+                        </ul>
+                    </div>
+                    <div class="custom-option">
+                        <h3>Wheel Options</h3>
+                        <ul>
+                            <li>21-inch RS Spyder</li>
+                            <li>22-inch RS Design</li>
+                            <li>Custom Matte Finishes</li>
+                            <li>Sport Brake Pads</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action -->
+            <section class="cta-section">
+                <h2>Ready to Experience Power</h2>
+                <p>Join the elite circle of Porsche Black Edition owners</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary">Configure Now</button>
+                    <button class="btn btn-secondary">Book Test Drive</button>
+                </div>
+            </section>
+
+            <!-- Technology Section -->
+            <section class="technology">
+                <h2>Advanced Technology</h2>
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <img src="images/tech-connect.png" alt="Porsche Connect" class="tech-image">
+                        <h3>Porsche Connect</h3>
+                        <p>Real-time vehicle data, remote access, and predictive navigation with cloud integration</p>
+                    </div>
+                    <div class="tech-card">
+                        <img src="images/tech-safety.png" alt="Safety Systems" class="tech-image">
+                        <h3>Safety Systems</h3>
+                        <p>Adaptive cruise control, lane keeping assist, and 360° panoramic camera</p>
+                    </div>
+                    <div class="tech-card">
+                        <img src="images/tech-performance.png" alt="E-Performance" class="tech-image">
+                        <h3>E-Performance</h3>
+                        <p>Hybrid technology with 48V mild-hybrid for enhanced efficiency</p>
+                    </div>
+                    <div class="tech-card">
+                        <img src="images/tech-modes.png" alt="Driving Modes" class="tech-image">
+                        <h3>Driving Modes</h3>
+                        <p>Sport, Sport Plus, and Race modes with customizable performance parameters</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Advanced Specs Table -->
+            <section class="advanced-specs">
+                <h2>Complete Specifications</h2>
+                
+                <!-- Engine & Performance -->
+                <div class="specs-category">
+                    <h3 class="specs-category-title">ENGINE & PERFORMANCE</h3>
+                    <div class="specs-table">
+                        <div class="spec-row">
+                            <div class="spec-label">Engine Type</div>
+                            <div class="spec-value">4.0L Twin-Turbocharged V8 + 48V Hybrid</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Power Output</div>
+                            <div class="spec-value">640 PS (455 hp) @ 5,750 RPM</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Torque</div>
+                            <div class="spec-value">850 Nm (627 lb-ft) @ 2,250-4,500 RPM</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Hybrid Motor Output</div>
+                            <div class="spec-value">48V electric motor integration</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">0-100 km/h (0-60 mph)</div>
+                            <div class="spec-value">3.3 seconds (5.2 seconds)</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">0-200 km/h (0-124 mph)</div>
+                            <div class="spec-value">9.2 seconds</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Top Speed</div>
+                            <div class="spec-value">300 km/h (186 mph)</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Transmission</div>
+                            <div class="spec-value">8-Speed Tiptronic with Sport Shift</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dimensions & Weight -->
+                <div class="specs-category">
+                    <h3 class="specs-category-title">DIMENSIONS & WEIGHT</h3>
+                    <div class="specs-table">
+                        <div class="spec-row">
+                            <div class="spec-label">Overall Length</div>
+                            <div class="spec-value">4,945 mm (194.5 inches)</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Overall Width</div>
+                            <div class="spec-value">1,984 mm (78.1 inches)</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Overall Height</div>
+                            <div class="spec-value">1,707 mm (67.2 inches)</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Wheelbase</div>
+                            <div class="spec-value">2,895 mm (113.98 inches)</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Track (Front/Rear)</div>
+                            <div class="spec-value">1,668 / 1,686 mm</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Curb Weight</div>
+                            <div class="spec-value">2,140 kg (4,717 lbs)</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Gross Vehicle Weight</div>
+                            <div class="spec-value">2,535 kg (5,588 lbs)</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Cargo Capacity</div>
+                            <div class="spec-value">770 liters (27.2 cubic feet)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fuel & Emissions -->
+                <div class="specs-category">
+                    <h3 class="specs-category-title">FUEL & EMISSIONS</h3>
+                    <div class="specs-table">
+                        <div class="spec-row">
+                            <div class="spec-label">Fuel Tank Capacity</div>
+                            <div class="spec-value">100 liters (26.4 gallons)</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Fuel Type</div>
+                            <div class="spec-value">Premium Gasoline (91+ RON)</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">WLTP Combined Consumption</div>
+                            <div class="spec-value">10.8 L/100km (21.8 mpg)</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">WLTP Combined Emissions</div>
+                            <div class="spec-value">272 g CO2/km</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Euro Emissions Standard</div>
+                            <div class="spec-value">Euro 6d with particle filter</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Emissions Control</div>
+                            <div class="spec-value">Advanced NOx reduction, particulate filter</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chassis & Suspension -->
+                <div class="specs-category">
+                    <h3 class="specs-category-title">CHASSIS & SUSPENSION</h3>
+                    <div class="specs-table">
+                        <div class="spec-row">
+                            <div class="spec-label">Suspension System</div>
+                            <div class="spec-value">Air Suspension with Adaptive Damping (PASM)</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Ground Clearance</div>
+                            <div class="spec-value">221-291 mm (8.7-11.4 inches)</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">All-Wheel Drive</div>
+                            <div class="spec-value">Standard with Dynamic Torque Distribution</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Differential Lock</div>
+                            <div class="spec-value">Porsche Traction Management (PTM)</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Steering Type</div>
+                            <div class="spec-value">Electric Power Steering with Sport Mapping</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Steering Ratio</div>
+                            <div class="spec-value">16:1 (variable)</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Turning Radius</div>
+                            <div class="spec-value">5.8 meters (19 feet)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Braking System -->
+                <div class="specs-category">
+                    <h3 class="specs-category-title">BRAKING SYSTEM</h3>
+                    <div class="specs-table">
+                        <div class="spec-row">
+                            <div class="spec-label">Front Brakes</div>
+                            <div class="spec-value">Carbon-ceramic, 10-piston fixed calipers</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Rear Brakes</div>
+                            <div class="spec-value">Carbon-ceramic, 4-piston fixed calipers</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Brake Disc Diameter</div>
+                            <div class="spec-value">Front: 390 mm / Rear: 330 mm</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">ABS System</div>
+                            <div class="spec-value">Porsche Stability Management (PSM)</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">100-0 km/h Braking Distance</div>
+                            <div class="spec-value">33.5 meters</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wheels & Tires -->
+                <div class="specs-category">
+                    <h3 class="specs-category-title">WHEELS & TIRES</h3>
+                    <div class="specs-table">
+                        <div class="spec-row">
+                            <div class="spec-label">Standard Wheel Size</div>
+                            <div class="spec-value">21-inch RS Spyder Design</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Optional Wheels</div>
+                            <div class="spec-value">22-inch RS Design, 20-inch standard</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Tire Size</div>
+                            <div class="spec-value">275/40R21 or 295/35R22</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Tire Type</div>
+                            <div class="spec-value">High-performance summer tires</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Wheel Finish</div>
+                            <div class="spec-value">Satin Black (standard for Black Edition)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interior & Comfort -->
+                <div class="specs-category">
+                    <h3 class="specs-category-title">INTERIOR & COMFORT</h3>
+                    <div class="specs-table">
+                        <div class="spec-row">
+                            <div class="spec-label">Seating Capacity</div>
+                            <div class="spec-value">5 passengers</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Interior Material</div>
+                            <div class="spec-value">Premium leather with Alcantara accents</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Steering Wheel</div>
+                            <div class="spec-value">Alcantara with paddle shifters</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Ambient Lighting</div>
+                            <div class="spec-value">64-color LED system (customizable)</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Climate Control</div>
+                            <div class="spec-value">Tri-zone automatic climate control</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Audio System</div>
+                            <div class="spec-value">BOSE® surround sound, 14 speakers</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Panoramic Sunroof</div>
+                            <div class="spec-value">Power-operated with sunshade</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technology & Connectivity -->
+                <div class="specs-category">
+                    <h3 class="specs-category-title">TECHNOLOGY & CONNECTIVITY</h3>
+                    <div class="specs-table">
+                        <div class="spec-row">
+                            <div class="spec-label">Infotainment System</div>
+                            <div class="spec-value">Porsche Communication Management (PCM)</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Display Size</div>
+                            <div class="spec-value">12.3-inch curved touch display</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Instrument Cluster</div>
+                            <div class="spec-value">Digital 12.3-inch with customizable displays</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Navigation</div>
+                            <div class="spec-value">Real-time traffic with predictive routing</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Connectivity</div>
+                            <div class="spec-value">Apple CarPlay, Android Auto, Porsche Connect</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Camera Systems</div>
+                            <div class="spec-value">360° panoramic camera with night vision</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Driver Assistance</div>
+                            <div class="spec-value">Adaptive cruise control, lane keep assist, collision avoidance</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Safety Features -->
+                <div class="specs-category">
+                    <h3 class="specs-category-title">SAFETY FEATURES</h3>
+                    <div class="specs-table">
+                        <div class="spec-row">
+                            <div class="spec-label">Airbags</div>
+                            <div class="spec-value">Dual front, side, and curtain airbags</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Stability Control</div>
+                            <div class="spec-value">Porsche Stability Management (PSM) Plus</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Crash Prevention</div>
+                            <div class="spec-value">Pre-collision system with autonomous braking</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Rollover Protection</div>
+                            <div class="spec-value">Electronic stability with roll bars</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Security Features</div>
+                            <div class="spec-value">Keyless entry, alarm system, GPS tracking</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exterior Features -->
+                <div class="specs-category">
+                    <h3 class="specs-category-title">EXTERIOR FEATURES</h3>
+                    <div class="specs-table">
+                        <div class="spec-row">
+                            <div class="spec-label">Headlights</div>
+                            <div class="spec-value">LED matrix with dynamic lighting</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Taillights</div>
+                            <div class="spec-value">Full LED with dynamic light bar</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Body Paint</div>
+                            <div class="spec-value">Jet Black, Obsidian, or Deep Black options</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Roof Rails</div>
+                            <div class="spec-value">Integrated aluminum roof rails</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Aerodynamics</div>
+                            <div class="spec-value">Cd: 0.31, active drag management</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Exterior Details -->
+            <section class="exterior-details">
+                <h2>Exterior Excellence</h2>
+                <div class="exterior-showcase">
+                    <img src="images/front.png" alt="Front View" class="exterior-angle">
+                    <img src="images/rear.png" alt="Rear View" class="exterior-angle">
+                    <img src="images/top.png" alt="Top View" class="exterior-angle">
+                </div>
+                <div class="exterior-grid">
+                    <div class="exterior-item">
+                        <h3>Aerodynamic Design</h3>
+                        <div class="detail-list">
+                            <p>• Aggressive front bumper with larger air intakes</p>
+                            <p>• Integrated side skirts for enhanced stability</p>
+                            <p>• Rear wing with active elements</p>
+                            <p>• Optimized underbody for reduced drag</p>
+                        </div>
+                    </div>
+                    <div class="exterior-item">
+                        <h3>Lighting Technology</h3>
+                        <div class="detail-list">
+                            <p>• Full LED headlight system with matrix technology</p>
+                            <p>• Dynamic cornering lights</p>
+                            <p>• Customizable LED taillights</p>
+                            <p>• Automatic high-beam control</p>
+                        </div>
+                    </div>
+                    <div class="exterior-item">
+                        <h3>Premium Finishes</h3>
+                        <div class="detail-list">
+                            <p>• Piano black exterior trim</p>
+                            <p>• Carbon fiber body panels optional</p>
+                            <p>• Black chrome accents throughout</p>
+                            <p>• Ceramic protective coating available</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Warranty & Service -->
+            <section class="warranty-service">
+                <h2>Porsche Ownership Benefits</h2>
+                <div class="warranty-visual">
+                    <img src="images/warranty.png" alt="5-Year Warranty" class="warranty-image">
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h3>5-Year Warranty</h3>
+                        <p>Unlimited mileage coverage on all components including engine, transmission, hybrid system and advanced electronics with genuine Porsche parts</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>24/7 Roadside Assistance</h3>
+                        <p>Global emergency support with priority response from certified Porsche technicians available anytime, anywhere you travel</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Free Maintenance</h3>
+                        <p>Complimentary scheduled servicing with genuine parts, diagnostics, and labor included during warranty period at authorized centers</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Premium Service Access</h3>
+                        <p>Exclusive access to world-class Porsche service facilities with VIP lounge, advanced diagnostics, and dedicated concierge support</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Extended Coverage Options</h3>
+                        <p>Flexible warranty extensions available up to 10 years with comprehensive coverage packages and customizable protection plans</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Roadside Assistance Plus</h3>
+                        <p>Premium roadside support with towing, fuel delivery, lockout assistance, and accommodation during unexpected breakdowns</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Hybrid System Protection</h3>
+                        <p>Complete coverage for hybrid battery, electric motor, high-voltage components, and power management systems with no mileage limits</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Exclusive Ownership Events</h3>
+                        <p>VIP access to Porsche track days, exclusive owner events, driving experiences, and community gatherings with fellow enthusiasts</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Financing Options -->
+            <section class="financing">
+                <h2>Flexible Financing Options</h2>
+                <div class="financing-visual">
+                    <img src="images/financing.png" alt="Financing Terms" class="financing-image">
+                </div>
+                <div class="financing-cards">
+                    <div class="fin-card">
+                        <h3>Porsche Finance</h3>
+                        <p><strong>Competitive Rates</strong></p>
+                        <p>Customized loan terms from 24-84 months with flexible down payments, refinancing options, and exclusive rates for Porsche owners</p>
+                    </div>
+                    <div class="fin-card">
+                        <h3>Lease Program</h3>
+                        <p><strong>Monthly Convenience</strong></p>
+                        <p>Premium lease options with included maintenance, warranty coverage, insurance packages, and end-of-lease upgrade flexibility</p>
+                    </div>
+                    <div class="fin-card">
+                        <h3>Trade-In Program</h3>
+                        <p><strong>Best Value</strong></p>
+                        <p>Competitive valuation for your current vehicle with instant quote, hassle-free process, and instant credit toward Black Edition</p>
+                    </div>
+                    <div class="fin-card">
+                        <h3>Special Financing</h3>
+                        <p><strong>Zero Interest</strong></p>
+                        <p>Limited-time promotional offers on select financing terms with deferred payment options and balloon payment flexibility</p>
+                    </div>
+                    <div class="fin-card">
+                        <h3>Corporate Leasing</h3>
+                        <p><strong>Business Solutions</strong></p>
+                        <p>Fleet management options, tax benefits, full maintenance coverage, and dedicated corporate account managers for businesses</p>
+                    </div>
+                    <div class="fin-card">
+                        <h3>Personal Banking</h3>
+                        <p><strong>Premium Services</strong></p>
+                        <p>Exclusive banking partnerships, private financing concierge, priority loan approval, and customized payment plans for high-net-worth clients</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Video Showcase Section -->
+            <section class="video-showcase">
+                <h2>Experience The Power</h2>
+                <div class="featured-image-container">
+                    <img src="images/featured-showcase.svg" alt="Black Edition Performance Specs" class="featured-showcase">
+                </div>
+                <div class="video-container">
+                    <div class="video-placeholder">
+                        <img src="images/video-showcase.svg" alt="Watch the Performance" class="video-play-icon">
+                        <div class="video-info">
+                            <h3>4K Ultra HD Performance Video</h3>
+                            <p>Experience the Cayenne Black Edition in action with cinematic footage of acceleration, handling, and design details.</p>
+                            <button class="play-btn">▶ WATCH NOW</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="faq">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <h3>What makes the Black Edition different?</h3>
+                        <p>The Black Edition features exclusive darkened exterior accents, premium black leather interior with Alcantara accents, enhanced performance tuning, and sport-tuned suspension for a truly unique and aggressive driving experience.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What's the fuel consumption?</h3>
+                        <p>WLTP combined consumption is 10.8 L/100km with emissions of 272 g CO2/km. Real-world consumption varies based on driving style, road conditions, and traffic. The hybrid system helps optimize fuel efficiency.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Is warranty included?</h3>
+                        <p>Yes, all Black Edition vehicles come with 3 years/unlimited miles basic warranty, extendable up to 5 years with optional premium packages. Includes all components including hybrid system and battery.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can I customize the vehicle?</h3>
+                        <p>Absolutely! Porsche offers extensive customization through our Porsche Exclusive Manufaktur program, including colors, materials, wheels, interior finishes, and performance packages.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What are the engine specifications?</h3>
+                        <p>The Black Edition features a 4.0L twin-turbocharged V8 engine with 48V hybrid system, producing 455 horsepower and 406 lb-ft of torque. Combined with the electric motor, it delivers enhanced performance and efficiency.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>How fast does it accelerate?</h3>
+                        <p>The Cayenne Black Edition accelerates from 0-60 mph in 5.2 seconds with a top speed of 157 mph. Advanced all-wheel drive system ensures superior traction and handling in all conditions.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What financing options are available?</h3>
+                        <p>We offer flexible Porsche Finance programs with terms from 24-84 months, competitive lease options, trade-in programs, and special promotional rates. Exclusive banking partnerships provide premium financing solutions.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Is the vehicle environmentally friendly?</h3>
+                        <p>Yes. The 48V hybrid system reduces emissions and fuel consumption while maintaining exceptional performance. The vehicle meets strict Euro 6d emissions standards with advanced particulate and NOx reduction technologies.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>Porsche</h4>
+                        <p>Crafting performance since 1948</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Sales & Support</h4>
+                        <p>Sales Hotline: +1 (800) PORSCHE</p>
+                        <p>Service: +1 (800) PORSCHE-SVC</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Connect With Us</h4>
+                        <p>Instagram • Twitter • YouTube • Facebook</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <h1 class="bharat-text">BHARAT</h1>
+                    <p class="bharat-subtitle">Excellence • Performance • Legacy</p>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <script src="nob.js"></script>
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const menu = document.querySelector('.menu');
+        
+        if (hamburger && menu) {
+            hamburger.addEventListener('click', function() {
+                menu.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+
+            // Close menu when a link is clicked
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function() {
+                    menu.classList.remove('active');
+                    hamburger.classList.remove('active');
+                });
+            });
+        }
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const text = this.textContent.trim().toLowerCase();
+                if (text === 'models') {
+                    lenis.scrollTo(document.querySelector('.models') || 0, { duration: 2 });
+                } else if (text === 'black edition') {
+                    lenis.scrollTo(document.querySelector('.edition-showcase') || 0, { duration: 2 });
+                } else if (text === 'configurator') {
+                    lenis.scrollTo(document.querySelector('.specs') || 0, { duration: 2 });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
