@@ -1,0 +1,46 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#d5001c;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#d5001c;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+  
+  <!-- Center glow -->
+  <circle cx="400" cy="225" r="300" fill="url(#centerGlow)"/>
+  
+  <!-- Play button circle background -->
+  <circle cx="400" cy="225" r="100" fill="none" stroke="#d5001c" stroke-width="2" opacity="0.3"/>
+  <circle cx="400" cy="225" r="90" fill="none" stroke="#d5001c" stroke-width="1" opacity="0.2"/>
+  
+  <!-- Large play button -->
+  <g>
+    <circle cx="400" cy="225" r="80" fill="rgba(213, 0, 28, 0.15)" stroke="#d5001c" stroke-width="2"/>
+    <!-- Play triangle -->
+    <polygon points="370,195 370,255 450,225" fill="#d5001c"/>
+  </g>
+  
+  <!-- Text labels -->
+  <text x="400" y="320" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#d5001c" text-anchor="middle">WATCH THE PERFORMANCE</text>
+  <text x="400" y="350" font-family="Arial, sans-serif" font-size="14" fill="#888" text-anchor="middle">4K Ultra HD • 2 Minutes 45 Seconds</text>
+  
+  <!-- Accent lines -->
+  <line x1="200" y1="225" x2="300" y2="225" stroke="#d5001c" stroke-width="1" opacity="0.4"/>
+  <line x1="500" y1="225" x2="600" y2="225" stroke="#d5001c" stroke-width="1" opacity="0.4"/>
+  
+  <!-- Corner accents -->
+  <g stroke="#d5001c" stroke-width="2" fill="none">
+    <path d="M 50 50 L 80 50 L 80 80"/>
+    <path d="M 750 50 L 720 50 L 720 80"/>
+    <path d="M 50 400 L 80 400 L 80 370"/>
+    <path d="M 750 400 L 720 400 L 720 370"/>
+  </g>
+</svg>

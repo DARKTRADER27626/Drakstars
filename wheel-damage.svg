@@ -1,0 +1,44 @@
+<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shatter">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+    </filter>
+    <filter id="crackGlow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.5" />
+    </filter>
+  </defs>
+  
+  <!-- Left Wheel Damage -->
+  <g class="wheel-damage-left" opacity="0" transform="translate(300, 500)">
+    <!-- Cracks radiating from center -->
+    <line x1="0" y1="0" x2="40" y2="-50" stroke="#ff4444" stroke-width="3" opacity="0.8" filter="url(#shatter)" class="crack-1" />
+    <line x1="0" y1="0" x2="50" y2="30" stroke="#ff4444" stroke-width="3" opacity="0.8" filter="url(#shatter)" class="crack-2" />
+    <line x1="0" y1="0" x2="-45" y2="35" stroke="#ff4444" stroke-width="3" opacity="0.8" filter="url(#shatter)" class="crack-3" />
+    <line x1="0" y1="0" x2="-35" y2="-45" stroke="#ff4444" stroke-width="3" opacity="0.8" filter="url(#shatter)" class="crack-4" />
+    
+    <!-- Shattering particles -->
+    <circle cx="20" cy="-30" r="4" fill="#ff6666" opacity="0.7" class="shard-1" />
+    <circle cx="35" cy="15" r="3" fill="#ff5555" opacity="0.6" class="shard-2" />
+    <circle cx="-25" cy="25" r="3.5" fill="#ff7777" opacity="0.7" class="shard-3" />
+    <circle cx="-20" cy="-35" r="4" fill="#ff4444" opacity="0.8" class="shard-4" />
+    <circle cx="15" cy="40" r="2.5" fill="#ff8888" opacity="0.5" class="shard-5" />
+    <circle cx="-40" cy="10" r="3" fill="#ff5555" opacity="0.6" class="shard-6" />
+  </g>
+  
+  <!-- Right Wheel Damage -->
+  <g class="wheel-damage-right" opacity="0" transform="translate(700, 500)">
+    <!-- Cracks radiating from center -->
+    <line x1="0" y1="0" x2="40" y2="-50" stroke="#ff4444" stroke-width="3" opacity="0.8" filter="url(#shatter)" class="crack-1" />
+    <line x1="0" y1="0" x2="50" y2="30" stroke="#ff4444" stroke-width="3" opacity="0.8" filter="url(#shatter)" class="crack-2" />
+    <line x1="0" y1="0" x2="-45" y2="35" stroke="#ff4444" stroke-width="3" opacity="0.8" filter="url(#shatter)" class="crack-3" />
+    <line x1="0" y1="0" x2="-35" y2="-45" stroke="#ff4444" stroke-width="3" opacity="0.8" filter="url(#shatter)" class="crack-4" />
+    
+    <!-- Shattering particles -->
+    <circle cx="20" cy="-30" r="4" fill="#ff6666" opacity="0.7" class="shard-1" />
+    <circle cx="35" cy="15" r="3" fill="#ff5555" opacity="0.6" class="shard-2" />
+    <circle cx="-25" cy="25" r="3.5" fill="#ff7777" opacity="0.7" class="shard-3" />
+    <circle cx="-20" cy="-35" r="4" fill="#ff4444" opacity="0.8" class="shard-4" />
+    <circle cx="15" cy="40" r="2.5" fill="#ff8888" opacity="0.5" class="shard-5" />
+    <circle cx="-40" cy="10" r="3" fill="#ff5555" opacity="0.6" class="shard-6" />
+  </g>
+</svg>

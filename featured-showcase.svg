@@ -1,0 +1,95 @@
+<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient dark to darker -->
+  <defs>
+    <linearGradient id="mainBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0a0a0a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="redAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#d5001c;stop-opacity:0" />
+      <stop offset="50%" style="stop-color:#d5001c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d5001c;stop-opacity:0" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="1000" height="600" fill="url(#mainBg)"/>
+  
+  <!-- Stylized Cayenne silhouette with technical lines -->
+  <g opacity="0.6">
+    <!-- Car body outline simplified -->
+    <path d="M 200 350 Q 250 320 350 300 L 600 280 Q 700 275 750 300 L 800 350 Q 800 380 750 400 L 250 400 Q 200 380 200 350" 
+          fill="none" stroke="#333" stroke-width="2"/>
+    
+    <!-- Hood lines -->
+    <line x1="350" y1="300" x2="380" y2="250" stroke="#555" stroke-width="1"/>
+    <line x1="500" y1="280" x2="520" y2="220" stroke="#555" stroke-width="1"/>
+    <line x1="600" y1="280" x2="620" y2="250" stroke="#555" stroke-width="1"/>
+    
+    <!-- Performance indicators -->
+    <circle cx="280" cy="350" r="8" fill="none" stroke="#d5001c" stroke-width="2" opacity="0.7"/>
+    <circle cx="720" cy="350" r="8" fill="none" stroke="#d5001c" stroke-width="2" opacity="0.7"/>
+    <circle cx="500" cy="390" r="6" fill="none" stroke="#d5001c" stroke-width="1.5" opacity="0.5"/>
+  </g>
+  
+  <!-- Technical grid pattern -->
+  <g opacity="0.15" stroke="#d5001c" stroke-width="0.5">
+    <line x1="0" y1="200" x2="1000" y2="200"/>
+    <line x1="0" y1="300" x2="1000" y2="300"/>
+    <line x1="0" y1="400" x2="1000" y2="400"/>
+    <line x1="200" y1="0" x2="200" y2="600"/>
+    <line x1="400" y1="0" x2="400" y2="600"/>
+    <line x1="600" y1="0" x2="600" y2="600"/>
+    <line x1="800" y1="0" x2="800" y2="600"/>
+  </g>
+  
+  <!-- Center accent bar -->
+  <rect x="0" y="280" width="1000" height="2" fill="url(#redAccent)"/>
+  
+  <!-- Performance stats boxes -->
+  <g font-family="Arial, sans-serif" fill="none" stroke="#d5001c" stroke-width="1">
+    <!-- Top left stat -->
+    <rect x="40" y="80" width="180" height="80" rx="4"/>
+    <text x="130" y="105" font-size="14" fill="#d5001c" text-anchor="middle" font-weight="bold">ENGINE POWER</text>
+    <text x="130" y="135" font-size="22" fill="#d5001c" text-anchor="middle" font-weight="bold">455 HP</text>
+    
+    <!-- Top right stat -->
+    <rect x="780" y="80" width="180" height="80" rx="4"/>
+    <text x="870" y="105" font-size="14" fill="#d5001c" text-anchor="middle" font-weight="bold">0-60 MPH</text>
+    <text x="870" y="135" font-size="22" fill="#d5001c" text-anchor="middle" font-weight="bold">5.2 SEC</text>
+    
+    <!-- Bottom left stat -->
+    <rect x="40" y="440" width="180" height="80" rx="4"/>
+    <text x="130" y="465" font-size="14" fill="#d5001c" text-anchor="middle" font-weight="bold">TOP SPEED</text>
+    <text x="130" y="495" font-size="22" fill="#d5001c" text-anchor="middle" font-weight="bold">157 MPH</text>
+    
+    <!-- Bottom right stat -->
+    <rect x="780" y="440" width="180" height="80" rx="4"/>
+    <text x="870" y="465" font-size="14" fill="#d5001c" text-anchor="middle" font-weight="bold">TORQUE</text>
+    <text x="870" y="495" font-size="22" fill="#d5001c" text-anchor="middle" font-weight="bold">406 LB-FT</text>
+  </g>
+  
+  <!-- Center branding text with glow effect -->
+  <g filter="url(#glow)">
+    <text x="500" y="320" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#d5001c" 
+          text-anchor="middle">BLACK EDITION</text>
+    <text x="500" y="360" font-family="Arial, sans-serif" font-size="18" fill="#888" 
+          text-anchor="middle" letter-spacing="3">ULTIMATE PERFORMANCE</text>
+  </g>
+  
+  <!-- Corner accent lines -->
+  <g stroke="#d5001c" stroke-width="2" fill="none" opacity="0.5">
+    <path d="M 30 30 L 80 30 L 80 80"/>
+    <path d="M 970 30 L 920 30 L 920 80"/>
+    <path d="M 30 570 L 80 570 L 80 520"/>
+    <path d="M 970 570 L 920 570 L 920 520"/>
+  </g>
+</svg>

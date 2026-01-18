@@ -1,0 +1,77 @@
+<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="smokeBlur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" />
+    </filter>
+    
+    <filter id="realisticSmoke">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="12" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.6"/>
+      </feComponentTransfer>
+    </filter>
+    
+    <radialGradient id="smokeGrad1" cx="40%" cy="40%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#e8e8e8;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#a0a0a0;stop-opacity:0" />
+    </radialGradient>
+    
+    <radialGradient id="smokeGrad2" cx="45%" cy="45%">
+      <stop offset="0%" style="stop-color:#d0d0d0;stop-opacity:0.7" />
+      <stop offset="60%" style="stop-color:#808080;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#404040;stop-opacity:0" />
+    </radialGradient>
+    
+    <radialGradient id="smokeGrad3" cx="35%" cy="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.6" />
+      <stop offset="40%" style="stop-color:#c0c0c0;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#606060;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Left side smoke clouds -->
+  <g class="smoke-cloud smoke-left-1">
+    <circle cx="150" cy="320" r="80" fill="url(#smokeGrad1)" filter="url(#realisticSmoke)"/>
+    <circle cx="120" cy="300" r="60" fill="url(#smokeGrad2)" filter="url(#realisticSmoke)"/>
+    <ellipse cx="180" cy="350" rx="70" ry="60" fill="url(#smokeGrad3)" filter="url(#realisticSmoke)"/>
+  </g>
+  
+  <g class="smoke-cloud smoke-left-2">
+    <circle cx="130" cy="380" r="70" fill="url(#smokeGrad1)" filter="url(#realisticSmoke)"/>
+    <circle cx="100" cy="360" r="55" fill="url(#smokeGrad2)" filter="url(#realisticSmoke)"/>
+    <ellipse cx="160" cy="410" rx="65" ry="55" fill="url(#smokeGrad3)" filter="url(#realisticSmoke)"/>
+  </g>
+  
+  <g class="smoke-cloud smoke-left-3">
+    <circle cx="110" cy="280" r="65" fill="url(#smokeGrad1)" filter="url(#realisticSmoke)"/>
+    <circle cx="85" cy="260" r="50" fill="url(#smokeGrad2)" filter="url(#realisticSmoke)"/>
+    <ellipse cx="135" cy="310" rx="60" ry="50" fill="url(#smokeGrad3)" filter="url(#realisticSmoke)"/>
+  </g>
+  
+  <!-- Center smoke clouds -->
+  <g class="smoke-cloud smoke-center-1">
+    <circle cx="200" cy="350" r="85" fill="url(#smokeGrad1)" filter="url(#realisticSmoke)"/>
+    <circle cx="170" cy="330" r="65" fill="url(#smokeGrad2)" filter="url(#realisticSmoke)"/>
+    <ellipse cx="230" cy="380" rx="75" ry="65" fill="url(#smokeGrad3)" filter="url(#realisticSmoke)"/>
+  </g>
+  
+  <g class="smoke-cloud smoke-center-2">
+    <circle cx="180" cy="420" r="80" fill="url(#smokeGrad1)" filter="url(#realisticSmoke)"/>
+    <circle cx="155" cy="400" r="60" fill="url(#smokeGrad2)" filter="url(#realisticSmoke)"/>
+    <ellipse cx="210" cy="450" rx="70" ry="60" fill="url(#smokeGrad3)" filter="url(#realisticSmoke)"/>
+  </g>
+  
+  <!-- Right side smoke clouds -->
+  <g class="smoke-cloud smoke-right-1">
+    <circle cx="250" cy="300" r="75" fill="url(#smokeGrad1)" filter="url(#realisticSmoke)"/>
+    <circle cx="220" cy="280" r="55" fill="url(#smokeGrad2)" filter="url(#realisticSmoke)"/>
+    <ellipse cx="280" cy="330" rx="65" ry="55" fill="url(#smokeGrad3)" filter="url(#realisticSmoke)"/>
+  </g>
+  
+  <g class="smoke-cloud smoke-right-2">
+    <circle cx="270" cy="380" r="70" fill="url(#smokeGrad1)" filter="url(#realisticSmoke)"/>
+    <circle cx="240" cy="360" r="52" fill="url(#smokeGrad2)" filter="url(#realisticSmoke)"/>
+    <ellipse cx="300" cy="410" rx="62" ry="52" fill="url(#smokeGrad3)" filter="url(#realisticSmoke)"/>
+  </g>
+</svg>
